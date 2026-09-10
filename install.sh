@@ -36,8 +36,8 @@ on_error() {
 trap 'on_error $LINENO' ERR
 
 APP_ROOT="${TELEGRAMSHOP_ROOT:-/opt/telegramshop}"
-REPO_URL="${TELEGRAMSHOP_REPO:-https://github.com/samkaren12/Telegramshopbot.git}"
-INSTALLER_URL="${TELEGRAMSHOP_INSTALLER:-https://raw.githubusercontent.com/samkaren12/Telegramshopbot/main/install.sh}"
+REPO_URL="${TELEGRAMSHOP_REPO:-https://github.com/samkaren12/NovaStoreBot.git}"
+INSTALLER_URL="${TELEGRAMSHOP_INSTALLER:-https://raw.githubusercontent.com/samkaren12/NovaStoreBot/main/install.sh}"
 BOT_NAME="${TELEGRAMSHOP_NAME:-main}"
 WEB_PORT="${TELEGRAMSHOP_PORT:-8080}"
 
