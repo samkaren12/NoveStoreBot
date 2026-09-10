@@ -1,4 +1,4 @@
-![1000097848](https://github.com/user-attachments/assets/f84fb9b6-e00d-4f3f-8945-815d7fd6ef43)
+
 <div align="center">
 
 # Nova Store
