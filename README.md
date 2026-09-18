@@ -142,7 +142,7 @@ sudo novastore
 این پروژه از repository عمومی `samkaren12/Telegramshopbot` استفاده می‌کند و اسکریپت نصب URL آن را از قبل می‌داند؛ بنابراین هنگام نصب دیگر URL repository را نمی‌پرسد.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/samkaren12/Telegramshopbot/main/install.sh -o /tmp/telegramshop-install.sh
+curl -fsSL https://raw.githubusercontent.com/samkaren12/NoveStoreBot/main/install.sh -o /tmp/telegramshop-install.sh
 sudo bash /tmp/telegramshop-install.sh
 ```
 
@@ -161,7 +161,7 @@ sudo bash /tmp/telegramshop-install.sh
 اگر دامنه وارد شود، نصب‌کننده Nginx، Certbot و redirect خودکار HTTP به HTTPS را تنظیم می‌کند. اگر دامنه را خالی بگذاری، پنل با HTTP و پورت `WEB_PORT` اجرا می‌شود.
 
 ```bash
-sudo TELEGRAMSHOP_REPO=https://github.com/USER/REPOSITORY.git bash /tmp/telegramshop-install.sh
+sudo TELEGRAMSHOP_REPO=https://github.com/samkaren12/NoveStoreBot.git bash /tmp/telegramshop-install.sh
 ```
 
 برای نصب چند ربات پس از نصب اول:
