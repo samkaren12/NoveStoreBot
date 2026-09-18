@@ -10,7 +10,7 @@
 [![aiogram](https://img.shields.io/badge/aiogram-3.x-2CA5E0?logo=telegram&logoColor=white)](https://docs.aiogram.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-powered-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-samkaren12%2FTelegramshopbot-181717?logo=github&logoColor=white)](https://github.com/samkaren12/Telegramshopbot)
+[![GitHub](https://img.shields.io/badge/GitHub-samkaren12%2FNoveStoreBot-181717?logo=github&logoColor=white)](https://github.com/samkaren12/NoveStoreBot)
 
 [فارسی](README.fa.md) · [English](README.EN.MD)
 
