@@ -12,7 +12,7 @@
 [![aiogram](https://img.shields.io/badge/aiogram-3.x-2CA5E0?logo=telegram&logoColor=white)](https://docs.aiogram.dev/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-powered-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org/)
-[![GitHub](https://img.shields.io/badge/GitHub-samkaren12%2FTelegramshopbot-181717?logo=github&logoColor=white)](https://github.com/samkaren12/Telegramshopbot)
+[![GitHub](https://img.shields.io/badge/GitHub-samkaren12%2FNoveStoreBot-181717?logo=github&logoColor=white)](https://github.com/samkaren12/NoveStoreBot)
 
 [صفحه اصلی](README.md) · [English](README.EN.MD)
 
@@ -87,8 +87,7 @@ python main.py
 پروژه عمومی است و installer آدرس Repository را از قبل می‌داند:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/samkaren12/Telegramshopbot/main/install.sh -o /tmp/novastore-install.sh
-sudo bash /tmp/novastore-install.sh
+curl -fsSL https://raw.githubusercontent.com/samkaren12/NoveStoreBot/main/install.sh -o /tmp/telegramshop-install.sh
 ```
 
 Installer این موارد را می‌گیرد:
@@ -168,4 +167,4 @@ novastore uninstall
 
 ## لینک پروژه
 
-https://github.com/samkaren12/Telegramshopbot
+https://github.com/samkaren12/NoveStoreBot
