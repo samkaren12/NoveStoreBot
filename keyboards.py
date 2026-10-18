@@ -8,21 +8,41 @@ from aiogram.types import (
 )
 
 
-def button(text: str, callback_data: str, style: ButtonStyle = ButtonStyle.PRIMARY) -> InlineKeyboardButton:
-    return InlineKeyboardButton(text=text, callback_data=callback_data, style=style)
+def button(
+    text: str,
+    callback_data: str,
+    style: ButtonStyle = ButtonStyle.PRIMARY,
+    icon_custom_emoji_id: str | None = None,
+) -> InlineKeyboardButton:
+    return InlineKeyboardButton(
+        text=text,
+        callback_data=callback_data,
+        style=style,
+        icon_custom_emoji_id=icon_custom_emoji_id,
+    )
 
 
-def copy_button(text: str, value: str, style: ButtonStyle = ButtonStyle.PRIMARY) -> InlineKeyboardButton:
-    return InlineKeyboardButton(text=text, copy_text=CopyTextButton(text=value), style=style)
+def copy_button(
+    text: str,
+    value: str,
+    style: ButtonStyle = ButtonStyle.PRIMARY,
+    icon_custom_emoji_id: str | None = None,
+) -> InlineKeyboardButton:
+    return InlineKeyboardButton(
+        text=text,
+        copy_text=CopyTextButton(text=value),
+        style=style,
+        icon_custom_emoji_id=icon_custom_emoji_id,
+    )
 
 
 MENU_DEFAULTS = {
-    "products": {"label": "🛍 محصولات", "color": ButtonStyle.DANGER.value, "order": 1},
-    "cart": {"label": "🧺 سبد خرید", "color": ButtonStyle.SUCCESS.value, "order": 2},
-    "profile": {"label": "👤 مشخصات من", "color": ButtonStyle.PRIMARY.value, "order": 3},
-    "support": {"label": "💬 پشتیبانی", "color": ButtonStyle.DANGER.value, "order": 4},
-    "help": {"label": "📚 راهنما", "color": ButtonStyle.SUCCESS.value, "order": 5},
-    "rules": {"label": "📜 قوانین", "color": ButtonStyle.PRIMARY.value, "order": 6},
+    "products": {"label": "🛍 محصولات", "color": ButtonStyle.DANGER.value, "order": 1, "emoji_id": ""},
+    "cart": {"label": "🧺 سبد خرید", "color": ButtonStyle.SUCCESS.value, "order": 2, "emoji_id": ""},
+    "profile": {"label": "👤 مشخصات من", "color": ButtonStyle.PRIMARY.value, "order": 3, "emoji_id": ""},
+    "support": {"label": "💬 پشتیبانی", "color": ButtonStyle.DANGER.value, "order": 4, "emoji_id": ""},
+    "help": {"label": "📚 راهنما", "color": ButtonStyle.SUCCESS.value, "order": 5, "emoji_id": ""},
+    "rules": {"label": "📜 قوانین", "color": ButtonStyle.PRIMARY.value, "order": 6, "emoji_id": ""},
 }
 
 
@@ -43,9 +63,15 @@ def main_menu(is_admin: bool = False, mode: str = "keyboard", config: dict | Non
         if is_admin:
             items.append(button("⚙️ مدیریت", "admin"))
         return grid(items, cycle_colors=False)
-    # Reply keyboards support KeyboardButton, but Telegram does not expose button colors for them.
     rows = []
-    labels = [KeyboardButton(text=item["label"]) for _, item in ordered]
+    labels = [
+        KeyboardButton(
+            text=item["label"],
+            style=ButtonStyle(item["color"]),
+            icon_custom_emoji_id=item.get("emoji_id") or None,
+        )
+        for _, item in ordered
+    ]
     rows.extend(labels[index:index + 3] for index in range(0, len(labels), 3))
     if is_admin:
         rows.append([KeyboardButton(text="⚙️ مدیریت"), KeyboardButton(text="🏠 منوی اصلی")])

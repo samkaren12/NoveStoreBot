@@ -104,6 +104,9 @@ def _valid_menu(config: dict[str, dict[str, Any]]) -> bool:
             return False
         if item.get("color") not in {"danger", "success", "primary"}:
             return False
+        emoji_id = item.get("emoji_id", "")
+        if not isinstance(emoji_id, str) or len(emoji_id) > 64 or (emoji_id and not emoji_id.isdigit()):
+            return False
         if not isinstance(item.get("order"), int) or not 1 <= item["order"] <= len(MENU_DEFAULTS):
             return False
         orders.append(item["order"])
